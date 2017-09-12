@@ -132,6 +132,13 @@
         android:negativeButtonText="@android:string/cancel" />
 
     <Preference
+        android:key="traffic"
+        android:fragment="com.android.settings.network.NetworkTrafficSettings"
+        android:icon="@drawable/ic_traffic"
+        android:order="23"
+        android:title="@string/network_traffic_title" />
+
+    <Preference
         android:fragment="com.android.settings.network.AdaptiveConnectivitySettings"
         android:key="adaptive_connectivity"
         android:title="@string/adaptive_connectivity_title"
