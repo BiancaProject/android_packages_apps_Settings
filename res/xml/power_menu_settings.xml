@@ -26,6 +26,12 @@
         settings:lottie_rawRes="@raw/lottie_long_press_power_for_power_menu"
         settings:controller="com.android.settings.gestures.LongPressPowerIllustrationPreferenceController"/>
 
+    <Preference
+        android:key="torch_long_press_power_gesture_desc"
+        android:title="@string/torch_long_press_power_gesture_title"
+        android:fragment="com.android.settings.gestures.PowerButtonTorchSettings"
+        settings:controller="com.android.settings.gestures.PowerButtonTorchGesturePreferenceController" />
+
     <PreferenceCategory
         android:key="gesture_power_menu_long_press_category"
         android:title="@string/power_menu_long_press_category_title">
