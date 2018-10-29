@@ -34,6 +34,12 @@
             android:title="@string/power_menu_long_press_for_power_menu_title"
             settings:controller="com.android.settings.gestures.LongPressPowerForPowerMenuPreferenceController"/>
 
+    <Preference
+        android:key="torch_long_press_power_gesture_desc"
+        android:title="@string/torch_long_press_power_gesture_title"
+        android:fragment="com.android.settings.gestures.PowerButtonTorchSettings"
+        settings:controller="com.android.settings.gestures.PowerButtonTorchGesturePreferenceController" />
+
         <com.android.settingslib.widget.SelectorWithWidgetPreference
             android:key="gesture_power_menu_long_press_for_assistant"
             android:title="@string/power_menu_long_press_for_assistant_title"
