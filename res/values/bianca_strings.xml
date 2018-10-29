@@ -41,4 +41,8 @@
     <string name="swipe_to_screenshot_title">Swipe to screenshot</string>
     <string name="swipe_to_screenshot_summary">Swipe 3 fingers down the screen to take a screenshot</string>
 
+    <!-- Torch Power button gestures -->
+    <string name="torch_long_press_power_gesture_title">Long press for torch</string>
+    <string name="torch_long_press_power_gesture_desc">Activate the torch by long pressing the power button while the display is off</string>
+
 </resources>
