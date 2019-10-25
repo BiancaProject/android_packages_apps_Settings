@@ -29,4 +29,6 @@
     <string name="mic_camera_indicator_settings_title">Status bar mic and camera indicator</string>
     <string name="mic_camera_indicator_settings_description">Show for all mic and camera indicator</string>
 
+    <!-- String for removal of sensitive info on about, depending on tap -->
+    <string name="device_info_protected_single_press">Tap to show info</string>
 </resources>
