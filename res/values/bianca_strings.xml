@@ -37,4 +37,8 @@
     <string name="mic_camera_indicator_settings_title">Status bar mic and camera indicator</string>
     <string name="mic_camera_indicator_settings_description">Show for all mic and camera indicator</string>
 
+     <!-- Global Actions -->
+    <string name="global_actions_advanced_reboot_title">Enable advanced restart</string>
+    <string name="global_actions_advanced_reboot_summary">Show options for recovery and bootloader in power menu</string>
+
 </resources>
