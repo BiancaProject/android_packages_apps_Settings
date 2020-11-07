@@ -30,10 +30,12 @@ import android.os.Message;
 import android.os.ServiceManager;
 import android.os.Vibrator;
 import android.service.notification.NotificationListenerService;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 
 import androidx.lifecycle.OnLifecycleEvent;
+import androidx.preference.PreferenceScreen;
 
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.settings.R;
@@ -49,6 +51,7 @@ public class NotificationVolumePreferenceController extends VolumeSeekBarPrefere
 
     private static final String TAG = "NotificationVolumePreferenceController";
     private static final String KEY_NOTIFICATION_VOLUME = "notification_volume";
+    private static final String KEY_VOLUME_LINK_NOTIFICATION = "volume_link_notification";
 
     private Vibrator mVibrator;
     private int mRingerMode = AudioManager.RINGER_MODE_NORMAL;
@@ -106,6 +109,19 @@ public class NotificationVolumePreferenceController extends VolumeSeekBarPrefere
         return mContext.getResources().getBoolean(R.bool.config_show_notification_volume)
                 && !mHelper.isSingleVolume()
                 ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+    }
+
+    @Override
+    public void displayPreference(PreferenceScreen screen) {
+        super.displayPreference(screen);
+        if (getAvailabilityStatus() == UNSUPPORTED_ON_DEVICE) {
+            return;
+        }
+        VolumeSeekBarPreference notificationVolume =
+                (VolumeSeekBarPreference) screen.findPreference(KEY_NOTIFICATION_VOLUME);
+        boolean linked = Settings.Secure.getInt(mContext.getContentResolver(),
+                KEY_VOLUME_LINK_NOTIFICATION, 1) == 1;
+        notificationVolume.setVisible(linked ? false : true);
     }
 
     @Override
