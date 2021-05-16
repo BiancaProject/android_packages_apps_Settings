@@ -53,4 +53,6 @@
     <string name="global_actions_advanced_reboot_title">Enable advanced restart</string>
     <string name="global_actions_advanced_reboot_summary">Show options for recovery and bootloader in power menu</string>
 
+    <!-- 4G icon -->
+    <string name="show_fourg_icon_title">Use 4G icon</string>
 </resources>
