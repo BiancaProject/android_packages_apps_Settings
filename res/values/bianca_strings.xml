@@ -209,4 +209,7 @@
     <string name="private_dns_hostname_switch" translatable="false">dns.switch.ch</string>
     <string name="private_dns_hostname_twnic" translatable="false">101.101.101.101</string>
     <string name="private_dns_hostname_uncensoreddns" translatable="false">unicast.censurfridns.dk</string>
+
+    <!-- Floating rotation button -->
+    <string name="enable_floating_rotation_button_title">Use floating rotate button</string>
 </resources>
