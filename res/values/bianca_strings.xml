@@ -25,4 +25,8 @@
     <string name="selinux_status_permissive">Permissive</string>
     <string name="selinux_status_enforcing">Enforcing</string>
 
+    <!-- Mic + Camera indicator -->
+    <string name="mic_camera_indicator_settings_title">Status bar mic and camera indicator</string>
+    <string name="mic_camera_indicator_settings_description">Show for all mic and camera indicator</string>
+
 </resources>
