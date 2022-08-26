@@ -180,6 +180,7 @@ public class AppInfoDashboardFragment extends DashboardFragment
         use(AppVersionPreferenceController.class).setParentFragment(this);
         use(AppPackageNamePreferenceController.class).setParentFragment(this);
         use(InstantAppDomainsPreferenceController.class).setParentFragment(this);
+        use(ExtraAppInfoPreferenceController.class).setPackageName(packageName);
 
         final HibernationSwitchPreferenceController appHibernationSettings =
                 use(HibernationSwitchPreferenceController.class);
