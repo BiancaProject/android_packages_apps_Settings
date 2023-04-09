@@ -149,6 +149,11 @@
     <string name="volume_separate_notification_title">Separated Ring and Notification</string>
     <string name="volume_separate_notification_summary">Allow controlling each stream individually</string>
 
+    <!-- QS panel -->
+    <string name="qs_panel_options_title">Quick settings</string>
+    <string name="qs_panel_options_summary">Customize quick settings tiles</string>
+    <string name="category_name_qs_tiles">QS tiles</string>
+
     <!-- QS tile shape -->
     <string name="qs_tile_shape">QS tile shape</string>
     <string name="qs_tile_round">Round</string>

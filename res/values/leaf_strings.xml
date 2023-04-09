@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 The LeafOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- About device -->
+    <string name="build_date">Build date</string>
+    <string name="leaf_version">LeafOS version</string>
+    <string name="leaf_vendor_security_patch">Vendor security patch level</string>
+
+    <!-- AdBlock -->
+    <string name="enable_adblock">Enable AdBlock</string>
+    <string name="enable_adblock_summary">Blocks various ads and trackers system-wide.</string>
+
+    <!-- Back gesture height -->
+    <string name="back_height_low_label">Full</string>
+    <string name="back_height_high_label">Bottom</string>
+    <string name="back_options_dialog_title">Options</string>
+    <string name="back_height_message">Amount of screen height used as touchable region for back gesture.</string>
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Swipe to screenshot</string>
+    <string name="three_finger_gesture_summary">Swipe down with three fingers to take a screenshot</string>
+
+   <!-- Hide power menu on lockscreen -->
+    <string name="hide_powermenu_lockscreen">Hide power menu on lockscreen</string>
+
+    <!-- QS brightness slider -->
+    <string name="qs_brightness_slider_title">Brightness slider</string>
+    <string name="qs_brightness_slider_summary">Adjust brightness slider from the Quick Settings</string>
+    <string name="qs_brightness_slider_never">Never show</string>
+    <string name="qs_brightness_slider_expanded">Show when expanded</string>
+    <string name="qs_brightness_slider_always">Show always</string>
+    <string name="qs_brightness_slider_position_title">Position</string>
+    <string name="qs_brightness_slider_position_top">Top</string>
+    <string name="qs_brightness_slider_position_bottom">Bottom</string>
+    <!-- QS auto brightness icon -->
+    <string name="qs_auto_brightness_title">Auto brightness icon</string>
+    <string name="qs_auto_brightness_summary">Show toggle for adaptive brightness near the slider</string>
+
+    <!-- QS panel -->
+    <string name="qs_panel_options_title">Quick settings</string>
+    <string name="qs_panel_options_summary">Customize quick settings tiles</string>
+    <string name="category_name_qs_tiles">QS tiles</string>
+
+    <!-- QS tile shape -->
+    <string name="qs_tile_shape">QS tile shape</string>
+    <string name="qs_tile_round">Round</string>
+    <string name="qs_tile_rect">Rounded Rectangle</string>
+    <string name="qs_tile_mix">Round for active tiles and Rounded Rectangle for inactive tiles</string>
+
+    <!-- [CHAR_LIMIT=NONE] Display Settings: Title of the setting which enables overlays to customize the statusbar icon -->
+    <string name="theme_customization_icon_pack_title">System Icons</string>
+
+    <!-- App lock -->
+    <string name="app_lock_title">App lock</string>
+    <plurals name="app_lock_summary">
+        <item quantity="one"><xliff:g example="1" id="Number of applications">%1$d</xliff:g> application is protected</item>
+        <item quantity="other"><xliff:g example="10" id="Number of applications">%1$d</xliff:g> applications are protected</item>
+    </plurals>
+    <string name="app_lock_authentication_dialog_title">Unlock</string>
+    <string name="enable_debugging">Enable debugging</string>
+    <string name="disable_debugging">Disable debugging</string>
+    <string name="app_lock_packages_title">Protected apps</string>
+    <string name="app_lock_packages_summary">Select the apps to protect with biometrics or device credentials</string>
+    <string name="app_lock_timeout_title">Auto lock timeout</string>
+    <string name="app_lock_timeout_summary">Duration of time after which an unlocked app in background should be locked</string>
+    <string name="app_lock_notifications_title">Redact notifications</string>
+    <string name="app_lock_notifications_summary">
+          Notification content will be hidden and collapsed for selected apps when they are locked.
+          Heads up notifications will be automatically disabled.
+    </string>
+    <string name="app_lock_notifications_disabled_summary">Protect an application first</string>
+    <string name="app_lock_biometrics_allowed_title">Enable biometrics for unlocking</string>
+    <string name="app_lock_footer_text">Bubbles will be automatically dismissed after timeout</string>
+    <string name="enable_protection">Enable protection</string>
+    <string name="hide_from_launcher_title">Hide from launcher</string>
+    <string name="hide_from_launcher_summary">
+        Prevent this application from showing up in launcher. Requires a launcher restart for changes to take effect.
+    </string>
+
+    <!-- Annoying Notifications -->
+    <string name="notification_sound_vib_screen_on_title">Annoying Notifications</string>
+    <string name="notification_sound_vib_screen_on_summary">Play sound and vibration for notifications when screen is on</string>
+
+    <!-- Hardware info -->
+    <string name="soc_model">SoC Model</string>
+    <string name="total_ram">Total RAM</string>
+
+    <!-- fingerprint lockout -->
+    <string name="fingerprint_lockout_title">Disable fingerprint lockout</string>
+    <string name="fingerprint_lockout_summary">Deactivates 30 second timeout as well as permanent lockout after multiple failed fingerprint unlock attempts</string>
+
+    <!-- Private DNS -->
+    <string name="private_dns_mode_adguard" translatable="false">AdGuard (CY)</string>
+    <string name="private_dns_mode_appliedprivacy" translatable="false">AppliedPrivacy (AT)</string>
+    <string name="private_dns_mode_cira" translatable="false">CIRA (CA)</string>
+    <string name="private_dns_mode_cleanbrowsing" translatable="false">CleanBrowsing (US)</string>
+    <string name="private_dns_mode_cloudflare" translatable="false">Cloudflare (US)</string>
+    <string name="private_dns_mode_cznic" translatable="false">CZ.NIC (CZ)</string>
+    <string name="private_dns_mode_google" translatable="false">Google (US)</string>
+    <string name="private_dns_mode_mullvad" translatable="false">Mullvad (SE)</string>
+    <string name="private_dns_mode_quadnine" translatable="false">Quad9 (CH)</string>
+    <string name="private_dns_mode_restena" translatable="false">Restena (LU)</string>
+    <string name="private_dns_mode_switch" translatable="false">SWITCH (CH)</string>
+    <string name="private_dns_mode_twnic" translatable="false">TW.NIC (TW)</string>
+    <string name="private_dns_mode_uncensoreddns" translatable="false">UncensoredDNS (DK)</string>
+</resources>
