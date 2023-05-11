@@ -172,6 +172,63 @@ public class PrivateDnsModeDialogPreference extends CustomDialogPreferenceCompat
         final ContentResolver contentResolver = context.getContentResolver();
 
         mMode = ConnectivitySettingsManager.getPrivateDnsMode(context);
+        if (mMode == PRIVATE_DNS_MODE_PROVIDER_HOSTNAME) {
+            final String privateDnsHostname =
+                    ConnectivitySettingsManager.getPrivateDnsHostname(context);
+            final String adguardHostname =
+                    context.getString(R.string.private_dns_hostname_adguard);
+            final String appliedprivacyHostname =
+                    context.getString(R.string.private_dns_hostname_appliedprivacy);
+            final String ciraHostname =
+                    context.getString(R.string.private_dns_hostname_cira);
+            final String cleanbrowsingHostname =
+                    context.getString(R.string.private_dns_hostname_cleanbrowsing);
+            final String cloudflareHostname =
+                    context.getString(R.string.private_dns_hostname_cloudflare);
+            final String cznicHostname =
+                    context.getString(R.string.private_dns_hostname_cznic);
+            final String googleHostname =
+                    context.getString(R.string.private_dns_hostname_google);
+            final String mullvadHostname =
+                    context.getString(R.string.private_dns_hostname_mullvad);
+            final String quadnineHostname =
+                    context.getString(R.string.private_dns_hostname_quadnine);
+            final String restenaHostname =
+                    context.getString(R.string.private_dns_hostname_restena);
+            final String switchHostname =
+                    context.getString(R.string.private_dns_hostname_switch);
+            final String twnicflareHostname =
+                    context.getString(R.string.private_dns_hostname_twnic);
+            final String uncensoreddnsHostname =
+                    context.getString(R.string.private_dns_hostname_uncensoreddns);
+            if (privateDnsHostname.equals(adguardHostname)) {
+                mMode = PRIVATE_DNS_MODE_ADGUARD;
+            } else if (privateDnsHostname.equals(appliedprivacyHostname)) {
+                mMode = PRIVATE_DNS_MODE_APPLIEDPRIVACY;
+            } else if (privateDnsHostname.equals(ciraHostname)) {
+                mMode = PRIVATE_DNS_MODE_CIRA;
+            } else if (privateDnsHostname.equals(cleanbrowsingHostname)) {
+                mMode = PRIVATE_DNS_MODE_CLEANBROWSING;
+            } else if (privateDnsHostname.equals(cloudflareHostname)) {
+                mMode = PRIVATE_DNS_MODE_CLOUDFLARE;
+            } else if (privateDnsHostname.equals(cznicHostname)) {
+                mMode = PRIVATE_DNS_MODE_CZNIC;
+            } else if (privateDnsHostname.equals(googleHostname)) {
+                mMode = PRIVATE_DNS_MODE_GOOGLE;
+            } else if (privateDnsHostname.equals(mullvadHostname)) {
+                mMode = PRIVATE_DNS_MODE_MULLVAD;
+            } else if (privateDnsHostname.equals(quadnineHostname)) {
+                mMode = PRIVATE_DNS_MODE_QUADNINE;
+            } else if (privateDnsHostname.equals(restenaHostname)) {
+                mMode = PRIVATE_DNS_MODE_RESTENA;
+            } else if (privateDnsHostname.equals(switchHostname)) {
+                mMode = PRIVATE_DNS_MODE_SWITCH;
+            } else if (privateDnsHostname.equals(twnicflareHostname)) {
+                mMode = PRIVATE_DNS_MODE_TWNIC;
+            } else if (privateDnsHostname.equals(uncensoreddnsHostname)) {
+                mMode = PRIVATE_DNS_MODE_UNCENSOREDDNS;
+            }
+        }
 
         mEditText = view.findViewById(R.id.private_dns_mode_provider_hostname);
         mEditText.addTextChangedListener(this);
@@ -248,15 +305,81 @@ public class PrivateDnsModeDialogPreference extends CustomDialogPreferenceCompat
     public void onClick(DialogInterface dialog, int which) {
         if (which == DialogInterface.BUTTON_POSITIVE) {
             final Context context = getContext();
+            int modeToSet = mMode;
             if (mMode == PRIVATE_DNS_MODE_PROVIDER_HOSTNAME) {
                 // Only clickable if hostname is valid, so we could save it safely
                 ConnectivitySettingsManager.setPrivateDnsHostname(context,
                         mEditText.getText().toString());
+            } else if (mMode == PRIVATE_DNS_MODE_ADGUARD) {
+                final String adguardHostname =
+                        context.getString(R.string.private_dns_hostname_adguard);
+                ConnectivitySettingsManager.setPrivateDnsHostname(context, adguardHostname);
+                modeToSet = PRIVATE_DNS_MODE_PROVIDER_HOSTNAME;
+            } else if (mMode == PRIVATE_DNS_MODE_APPLIEDPRIVACY) {
+                final String appliedprivacyHostname =
+                        context.getString(R.string.private_dns_hostname_appliedprivacy);
+                ConnectivitySettingsManager.setPrivateDnsHostname(context, appliedprivacyHostname);
+                modeToSet = PRIVATE_DNS_MODE_PROVIDER_HOSTNAME;
+            } else if (mMode == PRIVATE_DNS_MODE_CIRA) {
+                final String ciraHostname =
+                        context.getString(R.string.private_dns_hostname_cira);
+                ConnectivitySettingsManager.setPrivateDnsHostname(context, ciraHostname);
+                modeToSet = PRIVATE_DNS_MODE_PROVIDER_HOSTNAME;
+            } else if (mMode == PRIVATE_DNS_MODE_CLEANBROWSING) {
+                final String cleanbrowsingHostname =
+                        context.getString(R.string.private_dns_hostname_cleanbrowsing);
+                ConnectivitySettingsManager.setPrivateDnsHostname(context, cleanbrowsingHostname);
+                modeToSet = PRIVATE_DNS_MODE_PROVIDER_HOSTNAME;
+            } else if (mMode == PRIVATE_DNS_MODE_CLOUDFLARE) {
+                final String cloudflareHostname =
+                        context.getString(R.string.private_dns_hostname_cloudflare);
+                ConnectivitySettingsManager.setPrivateDnsHostname(context, cloudflareHostname);
+                modeToSet = PRIVATE_DNS_MODE_PROVIDER_HOSTNAME;
+            } else if (mMode == PRIVATE_DNS_MODE_CZNIC) {
+                final String cznicHostname =
+                        context.getString(R.string.private_dns_hostname_cznic);
+                ConnectivitySettingsManager.setPrivateDnsHostname(context, cznicHostname);
+                modeToSet = PRIVATE_DNS_MODE_PROVIDER_HOSTNAME;
+            } else if (mMode == PRIVATE_DNS_MODE_GOOGLE) {
+                final String googleHostname =
+                        context.getString(R.string.private_dns_hostname_google);
+                ConnectivitySettingsManager.setPrivateDnsHostname(context, googleHostname);
+                modeToSet = PRIVATE_DNS_MODE_PROVIDER_HOSTNAME;
+            } else if (mMode == PRIVATE_DNS_MODE_MULLVAD) {
+                final String mullvadHostname =
+                        context.getString(R.string.private_dns_hostname_mullvad);
+                ConnectivitySettingsManager.setPrivateDnsHostname(context, mullvadHostname);
+                modeToSet = PRIVATE_DNS_MODE_PROVIDER_HOSTNAME;
+            } else if (mMode == PRIVATE_DNS_MODE_QUADNINE) {
+                final String quadnineHostname =
+                        context.getString(R.string.private_dns_hostname_quadnine);
+                ConnectivitySettingsManager.setPrivateDnsHostname(context, quadnineHostname);
+                modeToSet = PRIVATE_DNS_MODE_PROVIDER_HOSTNAME;
+            } else if (mMode == PRIVATE_DNS_MODE_RESTENA) {
+                final String restenaHostname =
+                        context.getString(R.string.private_dns_hostname_restena);
+                ConnectivitySettingsManager.setPrivateDnsHostname(context, restenaHostname);
+                modeToSet = PRIVATE_DNS_MODE_PROVIDER_HOSTNAME;
+            } else if (mMode == PRIVATE_DNS_MODE_SWITCH) {
+                final String switchHostname =
+                        context.getString(R.string.private_dns_hostname_switch);
+                ConnectivitySettingsManager.setPrivateDnsHostname(context, switchHostname);
+                modeToSet = PRIVATE_DNS_MODE_PROVIDER_HOSTNAME;
+            } else if (mMode == PRIVATE_DNS_MODE_TWNIC) {
+                final String twnicflareHostname =
+                        context.getString(R.string.private_dns_hostname_twnic);
+                ConnectivitySettingsManager.setPrivateDnsHostname(context, twnicflareHostname);
+                modeToSet = PRIVATE_DNS_MODE_PROVIDER_HOSTNAME;
+            } else if (mMode == PRIVATE_DNS_MODE_UNCENSOREDDNS) {
+                final String uncensoreddnsHostname =
+                        context.getString(R.string.private_dns_hostname_uncensoreddns);
+                ConnectivitySettingsManager.setPrivateDnsHostname(context, uncensoreddnsHostname);
+                modeToSet = PRIVATE_DNS_MODE_PROVIDER_HOSTNAME;
             }
 
             FeatureFactory.getFactory(context).getMetricsFeatureProvider().action(context,
-                    SettingsEnums.ACTION_PRIVATE_DNS_MODE, mMode);
-            ConnectivitySettingsManager.setPrivateDnsMode(context, mMode);
+                    SettingsEnums.ACTION_PRIVATE_DNS_MODE, modeToSet);
+            ConnectivitySettingsManager.setPrivateDnsMode(context, modeToSet);
         }
     }
 
